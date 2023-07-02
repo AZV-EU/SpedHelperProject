@@ -1,0 +1,1313 @@
+{
+	"info": {
+		"_postman_id": "e2d8a6ef-ed0b-42da-8c0f-89ff18b64d3f",
+		"name": "SpedHelper REST Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28262481"
+	},
+	"item": [
+		{
+			"name": "Advisor",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Generate Report for All Vehicles",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/advisor/report",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"advisor",
+										"report"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Generate Report for Vehicle id Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/advisor/report?vehicle=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"advisor",
+										"report"
+									],
+									"query": [
+										{
+											"key": "vehicle",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Generate Report for Vehicle model Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/advisor/report?model=Ford Transit",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"advisor",
+										"report"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "Ford Transit"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Generate Report for All Vehicles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/advisor/report",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"advisor",
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Report for Vehicle Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/advisor/report?vehicle=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"advisor",
+								"report"
+							],
+							"query": [
+								{
+									"key": "vehicle",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Report for Vehicle model",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/advisor/report?model=Ford Transit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"advisor",
+								"report"
+							],
+							"query": [
+								{
+									"key": "model",
+									"value": "Ford Transit"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Get All Vehicles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/vehicles",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"vehicles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Vehicle By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/vehicle/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"vehicle",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Vehicle",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"model\": \"Debug Car\",\r\n    \"capacity\": 1,\r\n    \"range\": 1,\r\n    \"litresper100\": 1,\r\n    \"odometer\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/vehicle",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"vehicle"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Vehicle",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"model\": \"Debug Car Updated\",\r\n    \"capacity\": 2,\r\n    \"range\": 3,\r\n    \"litresper100\": 4,\r\n    \"odometer\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/vehicle",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"vehicle"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Vehicle",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/vehicle/5",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"vehicle",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get All Vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/vehicles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vehicle By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/vehicle/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehicle",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model\": \"Debug Car\",\r\n    \"capacity\": 1,\r\n    \"range\": 1,\r\n    \"litresper100\": 1,\r\n    \"odometer\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/vehicle",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"model\": \"Debug Car Updated\",\r\n    \"capacity\": 2,\r\n    \"range\": 3,\r\n    \"litresper100\": 4,\r\n    \"odometer\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/vehicle",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/vehicle/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehicle",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trip",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Get All Trips",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/trips",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"trips"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Trip By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/trip/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"trip",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Trips By Vehicle Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/trip/vehicle/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"trip",
+										"vehicle",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Trips By Vehicle Id After Date",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/trip/vehicle/1?startDate=2023-02-08T12:00:00.00Z",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"trip",
+										"vehicle",
+										"1"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-02-08T12:00:00.00Z"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Trips By Vehicle Id Before Date",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/trip/vehicle/1?endDate=2023-02-09T12:00:00.00Z",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"trip",
+										"vehicle",
+										"1"
+									],
+									"query": [
+										{
+											"key": "endDate",
+											"value": "2023-02-09T12:00:00.00Z"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Trips By Vehicle Id Between Date",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/trip/vehicle/1?startDate=2023-02-08T12:00:00.00Z&endDate=2023-02-09T12:00:00.00Z",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"trip",
+										"vehicle",
+										"1"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-02-08T12:00:00.00Z"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-02-09T12:00:00.00Z"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Trip",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vehicle\": {\r\n        \"id\": 1\r\n    },\r\n    \"distance\": 12345,\r\n    \"cargo\": 1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/trip/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"trip",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Trip",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 14,\r\n    \"vehicle\": {\r\n        \"id\": 1\r\n    },\r\n    \"distance\": 321.0,\r\n    \"cargo\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/trip",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"trip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Trip",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 12,\r\n    \"vehicle\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/trip/14",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"trip",
+										"14"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get All Trips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/trips",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Trip By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/trip/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trip",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Trips By Vehicle Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/trip/vehicle/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trip",
+								"vehicle",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Trips By Vehicle Id After Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/trip/vehicle/1?startDate=2023-02-08T12:00:00.00Z",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trip",
+								"vehicle",
+								"1"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2023-02-08T12:00:00.00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Trips By Vehicle Id Before Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/trip/vehicle/1?endDate=2023-02-09T12:00:00.00Z",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trip",
+								"vehicle",
+								"1"
+							],
+							"query": [
+								{
+									"key": "endDate",
+									"value": "2023-02-09T12:00:00.00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Trips By Vehicle Id Between Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/trip/vehicle/1?startDate=2023-02-08T12:00:00.00Z&endDate=2023-02-09T12:00:00.00Z",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trip",
+								"vehicle",
+								"1"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2023-02-08T12:00:00.00Z"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-02-09T12:00:00.00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Trip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicle\": {\r\n        \"id\": 1\r\n    },\r\n    \"distance\": 12345,\r\n    \"cargo\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/trip",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Trip",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 14,\r\n    \"vehicle\": {\r\n        \"id\": 1\r\n    },\r\n    \"distance\": 123.0,\r\n    \"cargo\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/trip",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Trip",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/trip/14",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"trip",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ApiKey",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Get All ApiKeys",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/apikeys",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"apikeys"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get ApiKey By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/apikey/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"apikey",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get ApiKey By Customer Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/apikey/customer/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"apikey",
+										"customer",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create ApiKey For Customer Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/apikey/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"apikey",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update ApiKey",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 8,\r\n    \"billingType\": \"ENTERPRISE\",\r\n    \"totalRequestsCount\": 0,\r\n    \"requestsSinceLastBillingCount\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/apikey",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"apikey"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete ApiKey",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/apikey/8",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"apikey",
+										"8"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get All ApiKeys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/apikeys",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"apikeys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ApiKey By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/apikey/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"apikey",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ApiKey By Key",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/apikey/key/debugkey",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"apikey",
+								"key",
+								"debugkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create ApiKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/apikey",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"apikey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ApiKey",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/apikey/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"apikey",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Get All Customers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/customers",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Customer By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/customer/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"customer",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"foreName\": \"Test\",\r\n    \"lastName\": \"Test\",\r\n    \"email\": \"test@testmail.com\",\r\n    \"passwordHash\": \"$2a$10$fEkBQG5P3rNvLCHQ3SilFearbEoWHWUPKzPnvMp.x36ITONx5g9GG\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/customer",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Customer",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4,\r\n    \"foreName\": \"TestNew\",\r\n    \"lastName\": \"TestNew\",\r\n    \"email\": \"test@testmail.com\",\r\n    \"passwordHash\": \"$2a$10$fEkBQG5P3rNvLCHQ3SilFearbEoWHWUPKzPnvMp.x36ITONx5g9GG\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/customer",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Customer",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/customer/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"customer",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "debugkey",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-api-key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

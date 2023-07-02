@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+        <title>Dashboard</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <table>
+            <tr th:each="vehicle : ${vehicles}">
+                <td th:text="${vehicle}"></td>
+            </tr>
+        </table>
+    </body>
+</html>
