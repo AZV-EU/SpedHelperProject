@@ -1,7 +1,7 @@
 SpedHelper Project
 
 Requirements:
-* PostgreSql server with database:
+* PostgreSql 15.3 server with database:
 * Database Name: spedhelperdb
 * and user:
 * Username: spedhelper
